@@ -1,0 +1,8 @@
+extends layout
+
+block content
+  .post
+    h1(style="margin-top: 0;")= post.title
+    div(style="font-style: italic; margin-bottom: 10px;") Posted by #{post.author} on #{post.dateCreated}
+    div(style="margin-bottom: 20px;")= post.content
+    a(href="/", style="text-decoration: none; background-color: #333; color: #fff; padding: 10px; border-radius: 5px;") Return to Index

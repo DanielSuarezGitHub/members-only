@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1(style='color: blue') New Post
+
+  form(method='post', action='', style='max-width: 600px; margin: auto;')
+
+    label(for='title') Title:
+    input(type='text' id='title' name='title', style='width: 100%; margin-bottom: 10px;')
+
+    label(for='content') Content:
+    textarea(id='content' name='content' rows='10', style='width: 100%; margin-bottom: 10px;')
+
+    button(type='submit', style='background-color: blue; color: white; border: none; padding: 10px 20px; border-radius: 5px;') Create

@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  if user
+    a(href="/logout", style="text-decoration: none; background-color: #333; color: #fff; padding: 10px; border-radius: 5px;") Logout
+    a(href="/createpost", style="text-decoration: none; background-color: #333; color: #fff; padding: 10px; border-radius: 5px; margin-left: 10px;") Create Post
+  else
+    a(href="/login", style="text-decoration: none; background-color: #333; color: #fff; padding: 10px; border-radius: 5px;") Login
+  if posts
+    each post in posts
+      div(style="border: 1px solid #ccc; padding: 10px; width: 400px; display: flex; flex-direction: column; align-items: center; margin-top: 10px;")
+        h1(style="font-weight: bold;") #{post.author}
+        div(style="margin-top: 5px;")
+          a(href=post.url, style="text-decoration: none; font-size: 24px;") #{post.title}

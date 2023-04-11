@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    h1 Login
+    form(style={'display': 'flex; flex-direction: column; width: 400px'}, action='', method='post')
+        label(for="username") Username
+        input(type="text", name="username")
+        label(for="password") Password
+        input(type="password", name="password")
+        button(type="submit") Login
+    a(href='/signup') dont have an account. Signup!

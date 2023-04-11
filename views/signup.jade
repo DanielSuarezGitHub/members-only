@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    h1 Sign Up!
+    form(action="", method="post")
+        div(style={'display': 'flex; flex-direction: column; width: 400px'})
+          label(for="username") Enter Your Username 
+          input(type="text", id='password' name="username")
+          label(for="password") Enter Your Password
+          input(type="text", id='password' name="password")
+          button(type="submit") Sign Up!
+          if errors
+            ul
+              each error in errors
+                li= error.msg
+    a(href="./login") Already have an account? Login.
+
